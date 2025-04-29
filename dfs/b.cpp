@@ -5,6 +5,14 @@
 using namespace std;
 vector<vector<int>> g;
 vector<char> used;
+void dfs(int v) {
+    used[v] = true;
+    for (int u : g[v]) {
+        if (!used[u]) {
+            dfs(u);
+        }
+    }
+}
 int main() {
     int n, m;
     cin >> n >> m;
@@ -16,4 +24,7 @@ int main() {
         g[v].push_back(u);
         g[u].push_back(v);
     }
+    
+    used.assign(n, false);
+    dfs(0);
 }

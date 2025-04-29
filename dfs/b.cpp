@@ -27,4 +27,6 @@ int main() {
     
     used.assign(n, false);
     dfs(0);
+    
+    if (f && m == n - 1) cout << "YES"; else cout << "NO";
 }

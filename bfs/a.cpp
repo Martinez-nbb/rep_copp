@@ -31,4 +31,7 @@ int main() {
 			q.push(u);
 		}
 	}
+        for (int i : d) {
+		cout << ((i == 1e9) ? -1 : i) << ' ';
+	}
 }

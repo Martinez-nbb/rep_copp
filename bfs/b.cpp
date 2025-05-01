@@ -31,4 +31,15 @@ int main() {
 			q.push(u);
 		}
 	}
+        if (used[v2]) {
+		vector<int> pt;
+		while (p[v2] != -1) {
+			pt.push_back(v2);
+			v2 = p[v2];
+		}
+		pt.push_back(v1);
+		reverse(pt.begin(), pt.end());
+		cout << pt.size() - 1 << '\n';
+		for (int u : pt) cout << u + 1 << ' ';
+	}
 }

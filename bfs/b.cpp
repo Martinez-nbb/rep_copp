@@ -13,4 +13,22 @@ int main() {
 		for (int j = 0; j < n; ++j) {
 			cin >> g[i][j];
 		}
+        queue<int> q;
+	vector<char> used(n, 0);
+	vector<int> d(n, 1e9);
+	vector<int> p(n, -1);
+	used[v1] = true;
+	d[v1] = 0;
+	q.push(v1);
+	while (!q.empty()) {
+		int v = q.front();
+		q.pop();
+		for (int u = 0; u < n; ++u) {
+			if (used[u] || (g[v][u] == '0')) continue;
+			d[u] = d[v] + 1;
+			used[u] = true;
+			p[u] = v;
+			q.push(u);
+		}
+	}
 }

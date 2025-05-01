@@ -42,4 +42,6 @@ int main() {
 		cout << pt.size() - 1 << '\n';
 		for (int u : pt) cout << u + 1 << ' ';
 	}
+        else cout << -1;
+	cout << '\n';
 }

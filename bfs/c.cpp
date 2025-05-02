@@ -31,4 +31,17 @@ int main() {
 		}
 	}
         cout << d[x2][y2] + 1 << '\n';
+        vector<pair<int, int>> pt;
+	pair<int, int> cc = { -1, -1 };
+	while (x2 != x1 || y2 != y1) {
+		pair<int, int> c = { x2, y2 };
+		pt.push_back(c);
+		c = p[x2][y2];
+		x2 = c.first;
+		y2 = c.second;
+	}
+	pair<int, int> c = { x2, y2 };
+	pt.push_back(c);
+	reverse(pt.begin(), pt.end());
+	for (auto i : pt) cout << i.first + 1 << ' ' << i.second + 1 << '\n';
 }

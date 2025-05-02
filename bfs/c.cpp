@@ -30,4 +30,5 @@ int main() {
 			p[nx][ny] = { x, y };
 		}
 	}
+        cout << d[x2][y2] + 1 << '\n';
 }

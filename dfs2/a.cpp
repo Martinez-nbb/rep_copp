@@ -25,4 +25,19 @@ int main() {
 		g[i].push_back(u);
 		g[u].push_back(i);
 	}
+        T = 0;
+	tin.resize(n);
+	tout.resize(n);
+	dfs(0);
+	int m;
+	cin >> m;
+	for (int i = 0; i < m; ++i) {
+		int v, u;
+		cin >> v >> u;
+		--v, --u;
+		if (is_ancestor(v, u)) cout << 1;
+		else if (is_ancestor(u, v)) cout << 2;
+		else cout << 3;
+		cout << '\n';
+	}
 }

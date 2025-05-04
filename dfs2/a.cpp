@@ -11,6 +11,9 @@ void dfs(int v, int p = -1) {
 	}
 	tout[v] = T;
 }
+bool is_ancestor(int v, int u) {
+	return tin[v] <= tin[u] && tout[u] <= tout[v];
+}
 int main() {
 	int n;
 	cin >> n;

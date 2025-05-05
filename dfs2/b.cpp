@@ -28,4 +28,8 @@ int main() {
 	p.assign(n, -1);
 	dfs(0);
 	int s = max_element(d.begin(), d.end()) - d.begin();
+    d.assign(n, 0);
+	p.assign(n, -1);
+	dfs(s);
+	int t = max_element(d.begin(), d.end()) - d.begin();
 }

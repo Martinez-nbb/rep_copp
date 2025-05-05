@@ -38,4 +38,5 @@ int main() {
 		t = p[t];
 	}
 	int d = path.size();
+    cout << (d - 1) * 3;
 }

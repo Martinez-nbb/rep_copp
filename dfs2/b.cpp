@@ -32,4 +32,10 @@ int main() {
 	p.assign(n, -1);
 	dfs(s);
 	int t = max_element(d.begin(), d.end()) - d.begin();
+    vector<int> path;
+	while (t != -1) {
+		path.push_back(t);
+		t = p[t];
+	}
+	int d = path.size();
 }

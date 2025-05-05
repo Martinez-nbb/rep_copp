@@ -24,4 +24,8 @@ int main() {
 		g[v].push_back(u);
 		g[u].push_back(v);
 	}
+    d.assign(n, 0);
+	p.assign(n, -1);
+	dfs(0);
+	int s = max_element(d.begin(), d.end()) - d.begin();
 }

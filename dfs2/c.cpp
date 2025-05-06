@@ -31,5 +31,9 @@ int main() {
 			g[v].push_back(u);
 			g[u].push_back(v);
 		}
+        bool f = true;
+		for (int j = 0; j < n; ++j) {
+			if (!cl[j]) f = f && dfs(j, 1);
+		}
     }
 }    

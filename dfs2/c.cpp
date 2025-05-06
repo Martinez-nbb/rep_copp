@@ -35,5 +35,7 @@ int main() {
 		for (int j = 0; j < n; ++j) {
 			if (!cl[j]) f = f && dfs(j, 1);
 		}
+        cout << (f ? "YES" : "NO");
+		cout << '\n';
     }
 }    

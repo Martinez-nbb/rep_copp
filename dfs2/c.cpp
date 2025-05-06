@@ -6,6 +6,16 @@
 using namespace std;
 vector<vector<int>> g;
 vector<int> cl;
+bool dfs(int v, int c) {
+	cl[v] = c;
+	for (int u : g[v]) {
+		if (cl[u] == 0) {
+			if (!dfs(u, 3 - c)) return false;
+		}
+		else if (cl[u] == cl[v]) return false;
+	}
+	return true;
+}
 int main() {
 	int t;
 	cin >> t;

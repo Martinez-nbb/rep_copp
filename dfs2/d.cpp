@@ -19,3 +19,13 @@ void dfs(int x, int y, char cl) {
 		dfs(nx, ny, 3 - cl);
 	}
 }
+int main()
+{
+	cin >> n;
+	used.assign(n, vector<char>(n, 0));
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			if (!used[i][j]) dfs(i, j, 1);
+		}
+	}
+}

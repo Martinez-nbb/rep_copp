@@ -28,4 +28,10 @@ int main()
 			if (!used[i][j]) dfs(i, j, 1);
 		}
 	}
+    for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			if (used[i][j] == 1) cout << "W"; else cout << "B";
+		}
+		cout << "\n";
+	}
 }

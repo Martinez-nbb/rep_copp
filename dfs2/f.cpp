@@ -34,4 +34,13 @@ int main() {
 			if (s[j] == 'W') g[i][j] = 1;
 		}
 	}
+    int a = 0;
+	for (int i = 0; i < 8; ++i)
+		for (int j = 0; j < 8; ++j) {
+			if (!used[i][j]) {
+				dfs(i, j);
+				++a;
+			}
+		}
+	cout << a;
 }

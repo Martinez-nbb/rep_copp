@@ -11,3 +11,18 @@ int dy[] = { 0, -1, 0, 1 };
 bool in(int x, int y) {
 	return 0 <= x && x < 8 && 0 <= y && y < 8;
 }
+void dfs(int x, int y) {
+	used[x][y] = 1;
+	for (int i = 0; i < 4; ++i) {
+		int nx = x + dx[i];
+		int ny = y + dy[i];
+		if (!in(nx, ny) || used[nx][ny]) {
+			continue;
+		}
+		if (g[x][y] == g[nx][ny]) {
+			continue;
+		}
+		dfs(nx, ny);
+		
+	}
+}

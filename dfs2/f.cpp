@@ -26,3 +26,12 @@ void dfs(int x, int y) {
 		
 	}
 }
+int main() {
+	string s;
+	for (int i = 0; i < 8; ++i) {
+		cin >> s;
+		for (int j = 0; j < 8; ++j) {
+			if (s[j] == 'W') g[i][j] = 1;
+		}
+	}
+}

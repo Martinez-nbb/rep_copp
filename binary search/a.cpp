@@ -25,4 +25,8 @@ int main() {
     	for (int i = 0; i < n; ++i) {
     		c += a[i] / m;
     	}
+        if (c >= k) {
+            y = m;
+            l = m + 1;
+    } else r = m - 1;
 }

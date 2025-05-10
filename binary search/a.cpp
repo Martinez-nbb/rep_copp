@@ -12,4 +12,8 @@ int main() {
     	cin >> a[i ];
     	c += a[i];
     }
+    if (c < k) {
+    	cout << 0;
+    	return 0;
+    }
 }

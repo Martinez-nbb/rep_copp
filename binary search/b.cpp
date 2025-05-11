@@ -21,4 +21,7 @@ int main() {
      		}
      		else l = m + 1;
      	}
+         cout << y << '\n';
+    }
+    	
 }

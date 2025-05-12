@@ -30,4 +30,6 @@ int main() {
      		}	
      		else r = m - 1;
      	}
+        cout << y << '\n';
+    }	
 }

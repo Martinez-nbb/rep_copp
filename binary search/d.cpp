@@ -20,7 +20,9 @@ int main(){
 			int x = a[j];
 			int y = a[j - 1];
 			int z = a[j - 2];
-			c = x + y + z - max(x, max(y, z)) - min(x, min(y, z));
-        }
-    }
+			m = max(c, m);
+            c = x + y + z - max(x, max(y, z)) - min(x, min(y, z));
+		 }
+		 cout << m << '\n';
+	}
 }

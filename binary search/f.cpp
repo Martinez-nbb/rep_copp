@@ -13,5 +13,6 @@ int main() {
     for (int i = 1; i < n; ++i) {
         y = (a[i ] - a[ i - 1]) / 2.0;
         if (y > r) r = y;
-   }     
+   }    
+   cout << setprecision(10) << r;
 }

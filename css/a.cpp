@@ -19,3 +19,10 @@ int main() {
 			cin >> g[i][j];
 		}
 	}
+    used.assign(n, false);
+	for (int i = 0; i < n; ++i) {
+		if (!used[i]) {
+			dfs(i);
+		}
+	}
+	reverse(ord.begin(), ord.end());

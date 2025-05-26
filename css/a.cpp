@@ -11,3 +11,11 @@ void dfs(int v) {
 	for (int u = 0; u < n; ++u) if (!used[u] && g[v][u]) dfs(u);
 	ord.push_back(v);
 }
+int main() {
+	cin >> n;
+	g.assign(n, vector<int> (n));
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			cin >> g[i][j];
+		}
+	}

@@ -26,3 +26,5 @@ int main() {
 		}
 	}
 	reverse(ord.begin(), ord.end());
+    for (int v : ord) cout << v + 1 << " ";
+}

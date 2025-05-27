@@ -10,3 +10,9 @@ void ts(int v) {
 	for (int u : g[v]) if (!used[u]) ts(u);
 	ord.push_back(v);
 }
+vector<int> clr;
+int comp;
+void dfs(int v) {
+	clr[v] = comp;
+	for (int u : tg[v]) if (clr[u] == -1) dfs(u);
+}

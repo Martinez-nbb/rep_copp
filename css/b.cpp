@@ -16,3 +16,15 @@ void dfs(int v) {
 	clr[v] = comp;
 	for (int u : tg[v]) if (clr[u] == -1) dfs(u);
 }
+int main() {
+	int n, m;
+	cin >> n >> m;
+	g.assign(n, {});
+	tg.assign(n, {});
+	for (int i = 0; i < m; ++i) {
+		int v, u;
+		cin >> v >> u;
+		--v, --u;
+		g[v].push_back(u);
+		tg[u].push_back(v);
+	}

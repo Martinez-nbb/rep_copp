@@ -34,3 +34,10 @@ int main() {
 			ts(i);
 		}
 	}
+    reverse(ord.begin(), ord.end());
+	comp = 0;
+	clr.assign(n, -1);
+	for (int v : ord) if (clr[v] == -1) {
+		dfs(v);
+		++comp;
+	}

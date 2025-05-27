@@ -41,3 +41,8 @@ int main() {
 		dfs(v);
 		++comp;
 	}
+    int l = 0;
+	for (int x : clr) l = max(l, x);
+	cout << l + 1 << '\n';
+	for (int x : clr) cout << x + 1 << ' ';
+}

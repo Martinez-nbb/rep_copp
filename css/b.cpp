@@ -28,3 +28,9 @@ int main() {
 		g[v].push_back(u);
 		tg[u].push_back(v);
 	}
+    used.assign(n, false);
+	for (int i = 0; i < n; ++i) {
+		if (!used[i]) {
+			ts(i);
+		}
+	}
